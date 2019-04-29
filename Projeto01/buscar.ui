@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Mostrar</class>
- <widget class="QDialog" name="Mostrar">
+ <class>buscar</class>
+ <widget class="QDialog" name="buscar">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,15 +16,15 @@
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>250</y>
-     <width>371</width>
-     <height>41</height>
+     <x>30</x>
+     <y>10</y>
+     <width>351</width>
+     <height>31</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <spacer name="horizontalSpacer_2">
+     <spacer name="horizontalSpacer_3">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -37,9 +37,9 @@
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QLabel" name="label">
       <property name="text">
-       <string>Mostrar Tudo</string>
+       <string>Buscar Horario</string>
       </property>
      </widget>
     </item>
@@ -61,10 +61,10 @@
   <widget class="QWidget" name="horizontalLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>20</y>
-     <width>371</width>
-     <height>41</height>
+     <x>30</x>
+     <y>250</y>
+     <width>351</width>
+     <height>31</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -82,14 +82,14 @@
      </spacer>
     </item>
     <item>
-     <widget class="QLabel" name="label">
+     <widget class="QPushButton" name="pushButton">
       <property name="text">
-       <string>Mostrar</string>
+       <string>Buscar</string>
       </property>
      </widget>
     </item>
     <item>
-     <spacer name="horizontalSpacer_3">
+     <spacer name="horizontalSpacer_2">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -106,15 +106,40 @@
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>60</y>
-     <width>371</width>
-     <height>181</height>
+     <x>30</x>
+     <y>50</y>
+     <width>351</width>
+     <height>191</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QListView" name="listView"/>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="text">
+       <string>Nome</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="text">
+       <string>CPF</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_4">
+      <property name="text">
+       <string>Horario Checkin</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="text">
+       <string>Horario Checkout</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

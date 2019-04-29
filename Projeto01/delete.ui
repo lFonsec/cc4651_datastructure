@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>Delete</class>
+ <widget class="QDialog" name="Delete">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,18 +13,29 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>80</y>
+     <width>361</width>
+     <height>151</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>9</x>
-     <y>210</y>
-     <width>381</width>
-     <height>80</height>
+     <x>20</x>
+     <y>249</y>
+     <width>361</width>
+     <height>41</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <spacer name="horizontalSpacer">
+     <spacer name="horizontalSpacer_4">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -39,12 +50,12 @@
     <item>
      <widget class="QPushButton" name="pushButton">
       <property name="text">
-       <string>Voltar</string>
+       <string>Deletar</string>
       </property>
      </widget>
     </item>
     <item>
-     <spacer name="horizontalSpacer_2">
+     <spacer name="horizontalSpacer_3">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -58,43 +69,48 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="verticalLayoutWidget">
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>59</x>
-     <y>50</y>
-     <width>291</width>
-     <height>131</height>
+     <x>20</x>
+     <y>10</y>
+     <width>361</width>
+     <height>41</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
     <item>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
       <property name="text">
-       <string> Nome</string>
+       <string>Deletar horario</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_3">
-      <property name="text">
-       <string>CPF</string>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_4">
-      <property name="text">
-       <string>Horario Checkin</string>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
       </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit">
-      <property name="text">
-       <string>Horario Checkout</string>
-      </property>
-     </widget>
+     </spacer>
     </item>
    </layout>
   </widget>
