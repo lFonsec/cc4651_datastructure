@@ -22,7 +22,36 @@
      <height>151</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout"/>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="text">
+       <string>Nome</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="text">
+       <string>CPF</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="text">
+       <string>Horario Checkin</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_4">
+      <property name="text">
+       <string>Horario Checkout</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">

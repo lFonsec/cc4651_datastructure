@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\adcionar.o
+./release\mostrar.o
+./release\delete.o
+./release\buscar.o
+./release\moc_mainwindow.o
+./release\moc_adcionar.o
+./release\moc_mostrar.o
+./release\moc_delete.o
+./release\moc_buscar.o
+);

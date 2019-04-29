@@ -1,0 +1,13 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\adcionar.o
+./debug\mostrar.o
+./debug\delete.o
+./debug\buscar.o
+./debug\moc_mainwindow.o
+./debug\moc_adcionar.o
+./debug\moc_mostrar.o
+./debug\moc_delete.o
+./debug\moc_buscar.o
+);

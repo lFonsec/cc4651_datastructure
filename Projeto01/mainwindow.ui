@@ -125,7 +125,7 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>THotel - Menu Principal -</string>
+        <string>Hotel - Menu Principal -</string>
        </property>
       </widget>
      </item>

@@ -13,12 +13,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -42,7 +42,7 @@ public:
     QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_3;
-    QTextBrowser *textBrowser;
+    QLabel *label;
     QSpacerItem *horizontalSpacer_4;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
@@ -106,7 +106,7 @@ public:
 
         horizontalLayoutWidget_2 = new QWidget(centralWidget);
         horizontalLayoutWidget_2->setObjectName(QStringLiteral("horizontalLayoutWidget_2"));
-        horizontalLayoutWidget_2->setGeometry(QRect(0, 10, 391, 31));
+        horizontalLayoutWidget_2->setGeometry(QRect(0, 0, 391, 51));
         horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget_2);
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
@@ -116,10 +116,10 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_3);
 
-        textBrowser = new QTextBrowser(horizontalLayoutWidget_2);
-        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+        label = new QLabel(horizontalLayoutWidget_2);
+        label->setObjectName(QStringLiteral("label"));
 
-        horizontalLayout_2->addWidget(textBrowser);
+        horizontalLayout_2->addWidget(label);
 
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
@@ -150,11 +150,7 @@ public:
         pushButton_2->setText(QApplication::translate("MainWindow", "Buscar", nullptr));
         pushButton_4->setText(QApplication::translate("MainWindow", "Mostrar Todos", nullptr));
         pushButton_5->setText(QApplication::translate("MainWindow", "Quit", nullptr));
-        textBrowser->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Hotel Menu Principal</p></body></html>", nullptr));
+        label->setText(QApplication::translate("MainWindow", "THotel - Menu Principal -", nullptr));
     } // retranslateUi
 
 };

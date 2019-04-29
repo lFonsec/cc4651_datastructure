@@ -12,115 +12,126 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Dialog
+class Ui_Adcionar
 {
 public:
-    QWidget *gridLayoutWidget;
-    QGridLayout *gridLayout;
-    QLineEdit *lineEdit_3;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
     QLineEdit *lineEdit;
+    QLineEdit *lineEdit_3;
     QLineEdit *lineEdit_4;
     QLineEdit *lineEdit_2;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer;
-    QTextBrowser *textBrowser;
     QSpacerItem *horizontalSpacer_2;
+    QPushButton *pushButton;
+    QSpacerItem *horizontalSpacer;
+    QWidget *horizontalLayoutWidget_2;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer_4;
+    QLabel *label;
+    QSpacerItem *horizontalSpacer_3;
 
-    void setupUi(QDialog *Dialog)
+    void setupUi(QDialog *Adcionar)
     {
-        if (Dialog->objectName().isEmpty())
-            Dialog->setObjectName(QStringLiteral("Dialog"));
-        Dialog->resize(400, 300);
-        gridLayoutWidget = new QWidget(Dialog);
-        gridLayoutWidget->setObjectName(QStringLiteral("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(10, 50, 381, 181));
-        gridLayout = new QGridLayout(gridLayoutWidget);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        gridLayout->setContentsMargins(0, 0, 0, 0);
-        lineEdit_3 = new QLineEdit(gridLayoutWidget);
-        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
-
-        gridLayout->addWidget(lineEdit_3, 3, 0, 1, 1);
-
-        lineEdit = new QLineEdit(gridLayoutWidget);
+        if (Adcionar->objectName().isEmpty())
+            Adcionar->setObjectName(QStringLiteral("Adcionar"));
+        Adcionar->resize(400, 300);
+        verticalLayoutWidget = new QWidget(Adcionar);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(30, 60, 351, 151));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        lineEdit = new QLineEdit(verticalLayoutWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
 
-        gridLayout->addWidget(lineEdit, 0, 0, 1, 1);
+        verticalLayout->addWidget(lineEdit);
 
-        lineEdit_4 = new QLineEdit(gridLayoutWidget);
+        lineEdit_3 = new QLineEdit(verticalLayoutWidget);
+        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+
+        verticalLayout->addWidget(lineEdit_3);
+
+        lineEdit_4 = new QLineEdit(verticalLayoutWidget);
         lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
 
-        gridLayout->addWidget(lineEdit_4, 1, 0, 1, 1);
+        verticalLayout->addWidget(lineEdit_4);
 
-        lineEdit_2 = new QLineEdit(gridLayoutWidget);
+        lineEdit_2 = new QLineEdit(verticalLayoutWidget);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
 
-        gridLayout->addWidget(lineEdit_2, 2, 0, 1, 1);
+        verticalLayout->addWidget(lineEdit_2);
 
-        pushButton = new QPushButton(Dialog);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(10, 250, 75, 23));
-        pushButton_2 = new QPushButton(Dialog);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(310, 250, 75, 23));
-        horizontalLayoutWidget = new QWidget(Dialog);
+        horizontalLayoutWidget = new QWidget(Adcionar);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(10, 0, 381, 31));
+        horizontalLayoutWidget->setGeometry(QRect(30, 239, 341, 51));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer);
-
-        textBrowser = new QTextBrowser(horizontalLayoutWidget);
-        textBrowser->setObjectName(QStringLiteral("textBrowser"));
-
-        horizontalLayout->addWidget(textBrowser);
-
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer_2);
 
+        pushButton = new QPushButton(horizontalLayoutWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
 
-        retranslateUi(Dialog);
+        horizontalLayout->addWidget(pushButton);
 
-        QMetaObject::connectSlotsByName(Dialog);
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        horizontalLayoutWidget_2 = new QWidget(Adcionar);
+        horizontalLayoutWidget_2->setObjectName(QStringLiteral("horizontalLayoutWidget_2"));
+        horizontalLayoutWidget_2->setGeometry(QRect(30, 10, 351, 41));
+        horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget_2);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_4);
+
+        label = new QLabel(horizontalLayoutWidget_2);
+        label->setObjectName(QStringLiteral("label"));
+
+        horizontalLayout_2->addWidget(label);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_3);
+
+
+        retranslateUi(Adcionar);
+
+        QMetaObject::connectSlotsByName(Adcionar);
     } // setupUi
 
-    void retranslateUi(QDialog *Dialog)
+    void retranslateUi(QDialog *Adcionar)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", nullptr));
-        lineEdit_3->setText(QApplication::translate("Dialog", "Horario Checkout", nullptr));
-        lineEdit->setText(QApplication::translate("Dialog", "Nome", nullptr));
-        lineEdit_4->setText(QApplication::translate("Dialog", "CPF", nullptr));
-        lineEdit_2->setText(QApplication::translate("Dialog", "Horario Checkin", nullptr));
-        pushButton->setText(QApplication::translate("Dialog", "Voltar", nullptr));
-        pushButton_2->setText(QApplication::translate("Dialog", "Adcionar", nullptr));
-        textBrowser->setHtml(QApplication::translate("Dialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Adcionar</p></body></html>", nullptr));
+        Adcionar->setWindowTitle(QApplication::translate("Adcionar", "Dialog", nullptr));
+        lineEdit->setText(QApplication::translate("Adcionar", "Nome", nullptr));
+        lineEdit_3->setText(QApplication::translate("Adcionar", "CPF", nullptr));
+        lineEdit_4->setText(QApplication::translate("Adcionar", "Horario Checkin", nullptr));
+        lineEdit_2->setText(QApplication::translate("Adcionar", "Horario Checkout", nullptr));
+        pushButton->setText(QApplication::translate("Adcionar", "Adcionar", nullptr));
+        label->setText(QApplication::translate("Adcionar", "Adcionar", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Dialog: public Ui_Dialog {};
+    class Adcionar: public Ui_Adcionar {};
 } // namespace Ui
 
 QT_END_NAMESPACE

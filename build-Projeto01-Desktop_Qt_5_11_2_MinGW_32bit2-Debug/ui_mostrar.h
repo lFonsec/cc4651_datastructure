@@ -13,37 +13,40 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QListView>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QTableView>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Dialog
+class Ui_Mostrar
 {
 public:
-    QTableView *tableView;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *pushButton;
     QSpacerItem *horizontalSpacer;
-    QPushButton *pushButton_2;
+    QWidget *horizontalLayoutWidget_2;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer_4;
+    QLabel *label;
     QSpacerItem *horizontalSpacer_3;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    QListView *listView;
 
-    void setupUi(QDialog *Dialog)
+    void setupUi(QDialog *Mostrar)
     {
-        if (Dialog->objectName().isEmpty())
-            Dialog->setObjectName(QStringLiteral("Dialog"));
-        Dialog->resize(400, 322);
-        tableView = new QTableView(Dialog);
-        tableView->setObjectName(QStringLiteral("tableView"));
-        tableView->setGeometry(QRect(60, 10, 256, 192));
-        horizontalLayoutWidget = new QWidget(Dialog);
+        if (Mostrar->objectName().isEmpty())
+            Mostrar->setObjectName(QStringLiteral("Mostrar"));
+        Mostrar->resize(400, 300);
+        horizontalLayoutWidget = new QWidget(Mostrar);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(15, 220, 371, 80));
+        horizontalLayoutWidget->setGeometry(QRect(10, 250, 371, 41));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -60,32 +63,53 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        pushButton_2 = new QPushButton(horizontalLayoutWidget);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        horizontalLayoutWidget_2 = new QWidget(Mostrar);
+        horizontalLayoutWidget_2->setObjectName(QStringLiteral("horizontalLayoutWidget_2"));
+        horizontalLayoutWidget_2->setGeometry(QRect(10, 20, 371, 41));
+        horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget_2);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addWidget(pushButton_2);
+        horizontalLayout_2->addItem(horizontalSpacer_4);
+
+        label = new QLabel(horizontalLayoutWidget_2);
+        label->setObjectName(QStringLiteral("label"));
+
+        horizontalLayout_2->addWidget(label);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer_3);
+        horizontalLayout_2->addItem(horizontalSpacer_3);
+
+        verticalLayoutWidget = new QWidget(Mostrar);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(10, 60, 371, 181));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        listView = new QListView(verticalLayoutWidget);
+        listView->setObjectName(QStringLiteral("listView"));
+
+        verticalLayout->addWidget(listView);
 
 
-        retranslateUi(Dialog);
+        retranslateUi(Mostrar);
 
-        QMetaObject::connectSlotsByName(Dialog);
+        QMetaObject::connectSlotsByName(Mostrar);
     } // setupUi
 
-    void retranslateUi(QDialog *Dialog)
+    void retranslateUi(QDialog *Mostrar)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", nullptr));
-        pushButton->setText(QApplication::translate("Dialog", "Voltar", nullptr));
-        pushButton_2->setText(QApplication::translate("Dialog", "Mostrar Tudo", nullptr));
+        Mostrar->setWindowTitle(QApplication::translate("Mostrar", "Dialog", nullptr));
+        pushButton->setText(QApplication::translate("Mostrar", "Mostrar Tudo", nullptr));
+        label->setText(QApplication::translate("Mostrar", "Mostrar", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Dialog: public Ui_Dialog {};
+    class Mostrar: public Ui_Mostrar {};
 } // namespace Ui
 
 QT_END_NAMESPACE

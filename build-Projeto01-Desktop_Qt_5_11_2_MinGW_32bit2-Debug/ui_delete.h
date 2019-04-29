@@ -13,7 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
@@ -21,91 +21,88 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_Dialog
+class Ui_Delete
 {
 public:
-    QWidget *horizontalLayoutWidget;
-    QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer;
-    QPushButton *pushButton;
-    QSpacerItem *horizontalSpacer_2;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
-    QLineEdit *lineEdit_2;
-    QLineEdit *lineEdit_3;
-    QLineEdit *lineEdit_4;
-    QLineEdit *lineEdit;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_4;
+    QPushButton *pushButton;
+    QSpacerItem *horizontalSpacer_3;
+    QWidget *horizontalLayoutWidget_2;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer_2;
+    QLabel *label;
+    QSpacerItem *horizontalSpacer;
 
-    void setupUi(QDialog *Dialog)
+    void setupUi(QDialog *Delete)
     {
-        if (Dialog->objectName().isEmpty())
-            Dialog->setObjectName(QStringLiteral("Dialog"));
-        Dialog->resize(400, 300);
-        horizontalLayoutWidget = new QWidget(Dialog);
+        if (Delete->objectName().isEmpty())
+            Delete->setObjectName(QStringLiteral("Delete"));
+        Delete->resize(400, 300);
+        verticalLayoutWidget = new QWidget(Delete);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(19, 80, 361, 151));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalLayoutWidget = new QWidget(Delete);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(9, 210, 381, 80));
+        horizontalLayoutWidget->setGeometry(QRect(20, 249, 361, 41));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer);
+        horizontalLayout->addItem(horizontalSpacer_4);
 
         pushButton = new QPushButton(horizontalLayoutWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
 
         horizontalLayout->addWidget(pushButton);
 
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
+        horizontalLayoutWidget_2 = new QWidget(Delete);
+        horizontalLayoutWidget_2->setObjectName(QStringLiteral("horizontalLayoutWidget_2"));
+        horizontalLayoutWidget_2->setGeometry(QRect(20, 10, 361, 41));
+        horizontalLayout_2 = new QHBoxLayout(horizontalLayoutWidget_2);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout->addItem(horizontalSpacer_2);
+        horizontalLayout_2->addItem(horizontalSpacer_2);
 
-        verticalLayoutWidget = new QWidget(Dialog);
-        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(59, 50, 291, 131));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        lineEdit_2 = new QLineEdit(verticalLayoutWidget);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        label = new QLabel(horizontalLayoutWidget_2);
+        label->setObjectName(QStringLiteral("label"));
 
-        verticalLayout->addWidget(lineEdit_2);
+        horizontalLayout_2->addWidget(label);
 
-        lineEdit_3 = new QLineEdit(verticalLayoutWidget);
-        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        verticalLayout->addWidget(lineEdit_3);
-
-        lineEdit_4 = new QLineEdit(verticalLayoutWidget);
-        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
-
-        verticalLayout->addWidget(lineEdit_4);
-
-        lineEdit = new QLineEdit(verticalLayoutWidget);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-
-        verticalLayout->addWidget(lineEdit);
+        horizontalLayout_2->addItem(horizontalSpacer);
 
 
-        retranslateUi(Dialog);
+        retranslateUi(Delete);
 
-        QMetaObject::connectSlotsByName(Dialog);
+        QMetaObject::connectSlotsByName(Delete);
     } // setupUi
 
-    void retranslateUi(QDialog *Dialog)
+    void retranslateUi(QDialog *Delete)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", nullptr));
-        pushButton->setText(QApplication::translate("Dialog", "Voltar", nullptr));
-        lineEdit_2->setText(QApplication::translate("Dialog", " Nome", nullptr));
-        lineEdit_3->setText(QApplication::translate("Dialog", "CPF", nullptr));
-        lineEdit_4->setText(QApplication::translate("Dialog", "Horario Checkin", nullptr));
-        lineEdit->setText(QApplication::translate("Dialog", "Horario Checkout", nullptr));
+        Delete->setWindowTitle(QApplication::translate("Delete", "Dialog", nullptr));
+        pushButton->setText(QApplication::translate("Delete", "Deletar", nullptr));
+        label->setText(QApplication::translate("Delete", "Deletar horario", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class Dialog: public Ui_Dialog {};
+    class Delete: public Ui_Delete {};
 } // namespace Ui
 
 QT_END_NAMESPACE
