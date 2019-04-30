@@ -27,7 +27,7 @@ void MainWindow::on_pushButton_5_clicked()
         NoLdde respostaBusca = listaReserva.buscar(cpf);
 
         QString hospedeNome = respostaBusca.getHospedeNome();
-        QMessageBox::information(this, "EITA", hospedeNome);
+        QMessageBox::information(this, "Notice", hospedeNome,"ok");
 
     }
 
@@ -37,18 +37,18 @@ void MainWindow::on_reservar_clicked()
     QString cpf = ui->cpfReserva->text();
     No* hospede = listaHospede.busca(cpf);
 
-    QString diaCI = ui->dataCI->text();
-    QString diaCO = ui->dataCO->text();
-    QString hhCI = ui->hhCI->text();
-    QString hhCO = ui->hhCO->text();
+    QString diaCheckIn = ui->dataCheckIn->text();
+    QString diaCheckOut = ui->dataCheckOut->text();
+    QString horaCheckIn = ui->horaCheckIn->text();
+    QString horaCheckOut = ui->horaCheckOut->text();
 
     if(hospede->getCPF()==0)
-        QMessageBox::information(this, "EITA", "hospede não encontrado");
+        QMessageBox::information(this, "Notice", "hospede não encontrado","ok");
     else{
-        if(listaReserva.insere(hospede, diaCI, hhCI, diaCO, hhCO))
-            QMessageBox::information(this, "EITA", "Reserva cadastrada com sucesso");
+        if(listaReserva.insere(hospede, diaCheckIn, horaCheckIn, diaCheckOut, horaCheckOut))
+            QMessageBox::information(this, "Notice", "Reserva cadastrada com sucesso","ok");
         else
-            QMessageBox::information(this, "EITA", "Erro");
+            QMessageBox::information(this, "Notice", "Erro","ok");
     }
 
 }
@@ -63,8 +63,8 @@ void MainWindow::on_consultaHospedes_clicked()
 
     QString nome = respostaBusca->getNome();
     QString cpfBuscado = respostaBusca->getCPF();
-    ui->nomeConsulta->setText(nome);
-    ui->cpfConsulta->setText(cpfBuscado);
+    QString nomecpf = "Nome do Hospede : " + nome +"  "+ "CPF do Hospede: " + cpfBuscado;
+     QMessageBox::information(this, "Notice", nomecpf ,"ok");
 }
 
 void MainWindow::on_cadastrarHospedes_clicked()
@@ -73,10 +73,10 @@ void MainWindow::on_cadastrarHospedes_clicked()
     QString cpf = ui->cpf->text();
 
     if(listaHospede.insere(nome, cpf)){
-       QMessageBox::information(this, "EITA", "Cadastrado com sucesso");
+       QMessageBox::information(this, "Notice", "Cadastrado com sucesso","ok");
     }
     else{
-       QMessageBox::information(this, "EITA", "Já existe estre cadastro");
+       QMessageBox::information(this, "Notice", "Já existe estre cadastro","ok");
     }
 
     ui->nome->clear();
@@ -91,9 +91,9 @@ void MainWindow::on_deleteHospedes_clicked()
         {
             QString hospedes = ui->deletar->text();
             if(listaHospede.remove(hospedes))
-                QMessageBox::information(this, "EITA", "Cadastro deletado");
+                QMessageBox::information(this, "Notice", "Cadastro deletado","ok");
             else
-                QMessageBox::information(this, "EITA", "Este cadastro não existe");
+                QMessageBox::information(this, "Notice", "Este cadastro não existe","ok");
 
     }
     }

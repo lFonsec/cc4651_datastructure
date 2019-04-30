@@ -16,8 +16,8 @@ private:
 public:
     Ldde():primeiro(NULL), size(0){}
 
-    bool insere(No*hospede, QString diaCI, QString hhCI, QString diaCO, QString hhCO){
-            NoLdde* novo = new NoLdde(hospede, diaCI, hhCI, diaCO, hhCO);
+    bool insere(No*hospede, QString diaCheckIn, QString horaCheckIn, QString diaCheckOut, QString horaCheckOut){
+            NoLdde* novo = new NoLdde(hospede, diaCheckIn, horaCheckIn, diaCheckOut, horaCheckOut);
 
             if(!novo){
                 return false;

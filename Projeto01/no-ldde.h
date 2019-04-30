@@ -9,12 +9,12 @@
 class NoLdde{
 
 public:
-  NoLdde( No* hospede, QString diaCI, QString hhCI, QString diaCO, QString hhCO): prx(NULL), ant(NULL){
+  NoLdde( No* hospede, QString diaCheckIn, QString horaCheckIn, QString diaCheckOut, QString horaCheckOut): prx(NULL), ant(NULL){
     hospede=hospede;
-    diaCI=diaCI;
-    diaCO=diaCO;
-    hhCI=hhCI;
-    hhCO=hhCO;
+    diaCheckIn=diaCheckIn;
+    diaCheckOut=diaCheckOut;
+    horaCheckIn=horaCheckIn;
+    horaCheckOut=horaCheckOut;
   }
 
 
@@ -22,10 +22,10 @@ public:
   NoLdde*prx;
   NoLdde*ant;
 
-  QString diaCI;
-  QString hhCI;
-  QString diaCO;
-  QString hhCO;
+  QString diaCheckIn;
+  QString horaCheckIn;
+  QString diaCheckOut;
+  QString horaCheckOut;
 
   QString getCpfHospede(){
     return hospede->getCPF();
