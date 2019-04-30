@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'delete.ui'
 **
-** Created by: Qt User Interface Compiler version 5.11.2
+** Created by: Qt User Interface Compiler version 5.11.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -14,6 +14,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
@@ -24,8 +25,6 @@ QT_BEGIN_NAMESPACE
 class Ui_Delete
 {
 public:
-    QWidget *verticalLayoutWidget;
-    QVBoxLayout *verticalLayout;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_4;
@@ -36,21 +35,18 @@ public:
     QSpacerItem *horizontalSpacer_2;
     QLabel *label;
     QSpacerItem *horizontalSpacer;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    QLineEdit *lineEdit;
 
     void setupUi(QDialog *Delete)
     {
         if (Delete->objectName().isEmpty())
             Delete->setObjectName(QStringLiteral("Delete"));
-        Delete->resize(400, 300);
-        verticalLayoutWidget = new QWidget(Delete);
-        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(19, 80, 361, 151));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        Delete->resize(400, 331);
         horizontalLayoutWidget = new QWidget(Delete);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(20, 249, 361, 41));
+        horizontalLayoutWidget->setGeometry(QRect(20, 270, 361, 41));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -86,6 +82,17 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer);
 
+        verticalLayoutWidget = new QWidget(Delete);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(20, 60, 361, 201));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        lineEdit = new QLineEdit(verticalLayoutWidget);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+
+        verticalLayout->addWidget(lineEdit);
+
 
         retranslateUi(Delete);
 
@@ -97,6 +104,7 @@ public:
         Delete->setWindowTitle(QApplication::translate("Delete", "Dialog", nullptr));
         pushButton->setText(QApplication::translate("Delete", "Deletar", nullptr));
         label->setText(QApplication::translate("Delete", "Deletar horario", nullptr));
+        lineEdit->setText(QApplication::translate("Delete", "CPF", nullptr));
     } // retranslateUi
 
 };
