@@ -32,7 +32,9 @@ HEADERS += \
     no.h \
     no-ldde.h \
     lde.h \
-    ldde.h
+    ldde.h \
+    ldde2.h \
+    no-ldde2.h
 
 FORMS += \
         mainwindow.ui

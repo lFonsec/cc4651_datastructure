@@ -2,11 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include "ldde2.h"
 #include "lde.h"
 #include "no.h"
 #include "ldde.h"
 #include "no-ldde.h"
+#include "no-ldde2.h"
+
+
 namespace Ui {
 class MainWindow;
 }
@@ -20,6 +23,7 @@ public:
     ~MainWindow();
     Lde listaHospede;
     Ldde listaReserva;
+    Ldde2 listaReserva2;
 
 
 
@@ -34,6 +38,8 @@ private slots:
     void on_cadastrarHospedes_clicked();
 
     void on_deleteHospedes_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
