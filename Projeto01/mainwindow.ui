@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>864</width>
-    <height>335</height>
+    <height>467</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -325,14 +325,24 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>250</y>
-      <width>75</width>
+      <x>0</x>
+      <y>210</y>
+      <width>161</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Mostrar os CPF cadastrados</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lista">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>240</y>
+      <width>256</width>
+      <height>151</height>
+     </rect>
     </property>
    </widget>
   </widget>

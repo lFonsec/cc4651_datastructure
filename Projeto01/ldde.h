@@ -16,8 +16,8 @@ private:
 public:
     Ldde():primeiro(NULL), size(0){}
 
-    bool insere(No*hospede, QString dataCheckIn, QString horaCheckIn){
-            NoLdde* novo = new NoLdde(hospede, dataCheckIn, horaCheckIn);
+    bool insere(No*hospede, QString dataCheckIn, QString horaCheckIn,QString diaCheckOut,QString horaCheckOut){
+            NoLdde* novo = new NoLdde(hospede, dataCheckIn, horaCheckIn,diaCheckOut,horaCheckOut);
 
             if(!novo){
                 return false;
@@ -46,13 +46,13 @@ public:
             size++;
             return true;
 
-  }
+    }
 
     NoLdde buscar(QString cpf){
         if(!primeiro){
 
             No* a= new No("Hospede não encontrado", "");
-            NoLdde* b = new NoLdde(a, "","");
+            NoLdde* b = new NoLdde(a, "","","","");
             return *b;
 
         }

@@ -1,10 +1,10 @@
-#ifndef LDDE2_H
-#define LDDE2_H
+#ifndef LDDE_H
+#define LDDE_H
 
 #include<iostream>
 #include<cstdlib>
 
-#include"no.h""
+#include"no2.h"
 #include"no-ldde2.h"
 
 class Ldde2{
@@ -16,8 +16,8 @@ private:
 public:
     Ldde2():primeiro(NULL), size(0){}
 
-    bool insere(No*hospede,QString dataCheckOut, QString horaCheckOut){
-            NoLdde2* novo = new NoLdde2(hospede, dataCheckOut, horaCheckOut);
+    bool insere2(No2*hospede, QString dataCheckIn, QString horaCheckIn,QString diaCheckOut,QString horaCheckOut){
+            NoLdde2* novo = new NoLdde2(hospede, dataCheckIn, horaCheckIn,diaCheckOut,horaCheckOut);
 
             if(!novo){
                 return false;
@@ -46,13 +46,13 @@ public:
             size++;
             return true;
 
-  }
+    }
 
     NoLdde2 buscar(QString cpf){
         if(!primeiro){
 
-            No* a= new No("Hospede não encontrado", "");
-            NoLdde2* b = new NoLdde2(a, "","");
+            No2* a= new No2("Hospede não encontrado", "");
+            NoLdde2* b = new NoLdde2(a, "","","","");
             return *b;
 
         }

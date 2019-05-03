@@ -2,13 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "ldde2.h"
+//#include "ldde2.h"
 #include "lde.h"
 #include "no.h"
 #include "ldde.h"
 #include "no-ldde.h"
-#include "no-ldde2.h"
-
+//#include "no-ldde2.h"
+//#include "no2.h"
+#include "pilha.h"
 
 namespace Ui {
 class MainWindow;
@@ -23,8 +24,7 @@ public:
     ~MainWindow();
     Lde listaHospede;
     Ldde listaReserva;
-    Ldde2 listaReserva2;
-
+    PilhaEstatica<QString> log;
 
 
 private slots:

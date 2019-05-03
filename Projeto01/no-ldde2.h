@@ -4,19 +4,20 @@
 #include<iostream>
 #include<cstdlib>
 
-#include "no.h"
+#include "no2.h"
+#include<QString>
 
 class NoLdde2{
 
 public:
-  NoLdde2( No* hospede, QString diaCheckOut, QString horaCheckOut): prx(NULL), ant(NULL){
+  NoLdde2(No2* hospede, QString diaCheckOut, QString horaCheckOut): prx(NULL), ant(NULL){
     hospede=hospede;
     diaCheckOut=diaCheckOut;
     horaCheckOut=horaCheckOut;
   }
 
 
-  No*hospede;
+  No2*hospede;
   NoLdde2*prx;
   NoLdde2*ant;
 

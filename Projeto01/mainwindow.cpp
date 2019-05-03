@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "ldde2.h"
+#include "ldde.h"
 
 #include "lde.h"
 #include "no.h"
@@ -20,14 +22,14 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
+int x=0;
 void MainWindow::on_pushButton_5_clicked()
 {
         QString cpf = ui->cpfConsultarReserva->text();
         NoLdde respostaBusca = listaReserva.buscar(cpf);
-        NoLdde2 respostaBusca2 = listaReserva2.buscar(cpf);
+        //NoLdde2 respostaBusca2 = listaReserva2.buscar(cpf);
         QString hospedeNome = respostaBusca.getHospedeNome();
-        QString hospedeNome2 = respostaBusca2.getHospedeNome();
+        //QString hospedeNome2 = respostaBusca2.getHospedeNome();
         QMessageBox::information(this, "Notice", hospedeNome,"ok");
 
     }
@@ -45,7 +47,8 @@ void MainWindow::on_reservar_clicked()
     if(hospede->getCPF()==0)
         QMessageBox::information(this, "Notice", "hospede não encontrado","ok");
     else{
-        if(listaReserva.insere(hospede, diaCheckIn, horaCheckIn) && (listaReserva2.insere(hospede, diaCheckOut, horaCheckOut))){
+        if(listaReserva.insere(hospede, diaCheckIn, horaCheckIn,diaCheckOut,horaCheckOut)){
+
             QMessageBox::information(this, "Notice", "Reserva cadastrada com sucesso","ok");
             ui->horaCheckOut->clear();
             ui->horaCheckIn->clear();
@@ -75,10 +78,9 @@ void MainWindow::on_cadastrarHospedes_clicked()
 {
     QString nome = ui->nome->text();
     QString cpf = ui->cpf->text();
-
     if(listaHospede.insere(nome, cpf)){
        QMessageBox::information(this, "Notice", "Cadastrado com sucesso","ok");
-
+        log.empilha(cpf);
     }
     else{
        QMessageBox::information(this, "Notice", "Já existe estre cadastro","ok");
@@ -107,4 +109,9 @@ void MainWindow::on_deleteHospedes_clicked()
 void MainWindow::on_pushButton_clicked()
 {
 
+   //QMessageBox::information(this,"notice",log.desempilha(),"ok");
+   //for (int i = 0; i < sizeof(1); ++i) {
+
+    ui->lista->addItem(log.desempilha());
 }
+

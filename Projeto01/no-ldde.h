@@ -3,16 +3,18 @@
 
 #include<iostream>
 #include<cstdlib>
-
+#include<QString>
 #include "no.h"
 
 class NoLdde{
 
 public:
-  NoLdde( No* hospede, QString diaCheckIn, QString horaCheckIn): prx(NULL), ant(NULL){
+  NoLdde( No* hospede, QString diaCheckIn, QString horaCheckIn,QString diaCheckOut, QString horaCheckOut): prx(NULL), ant(NULL){
     hospede=hospede;
     diaCheckIn=diaCheckIn;
     horaCheckIn=horaCheckIn;
+    diaCheckOut=diaCheckOut;
+    horaCheckOut=horaCheckOut;
   }
 
 
@@ -22,6 +24,8 @@ public:
 
   QString diaCheckIn;
   QString horaCheckIn;
+  QString diaCheckOut;
+  QString horaCheckOut;
 
   QString getCpfHospede(){
     return hospede->getCPF();

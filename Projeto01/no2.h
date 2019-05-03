@@ -1,23 +1,23 @@
-#ifndef NO_H
-#define NO_H
+#ifndef NO2_H
+#define NO2_H
+
 
 #include<cstdlib>
-#include<QString>
 using namespace std;
 
-class No{
+class No2{
 private:
   QString nome;
   QString cpf;
 
 
 public:
-  No(QString nomeP, QString cpfP){
-      nome =nomeP;
-      cpf=cpfP;
+  No2(QString nomeP, QString cpfP){
+      nome = nomeP;
+      cpf = cpfP;
   }
 
-  No* proximo;
+  No2* proximo;
 
   QString getNome(){
       return nome;
